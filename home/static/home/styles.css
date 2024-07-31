@@ -44,7 +44,7 @@ body {
 
 /* Estilo de los enlaces dentro de la tarjeta */
 .container a {
-    background-color: #3498db; /* Color de fondo para los botones */
+    background-color: #0d3b66; /* Color de fondo para los botones */
     color: #ffffff;
     padding: 0.75rem 1.5rem;
     border-radius: 0.5rem; /* Borde redondeado para botones */
@@ -121,8 +121,8 @@ li:hover {
 
 /* Estilos para los botones de detalle, editar y eliminar */
 .link-container a {
-    background-color: #3498db;
-    color: #ffffff;
+    background-color: #B2967D;
+    color: #e7d8c9;
     padding: 0.75rem 1.5rem;
     border-radius: 0.5rem;
     display: inline-flex;
@@ -160,7 +160,7 @@ li:hover {
 
 /* Enlaces */
 a {
-    color: #3498db;
+    color: #0d3b66;
     text-decoration: none;
 }
 
@@ -170,7 +170,7 @@ a:hover {
 
 /* Botones */
 button {
-    background-color: #3498db;
+    background-color: #0d3b66;
     color: #ffffff;
     border: none;
     padding: 0.75rem 1.5rem;
@@ -182,7 +182,7 @@ button {
 
 /* Hover para botones */
 button:hover {
-    background-color: #2980b9;
+    background-color: #0d3b66;
 }
 
 /* Formularios */
