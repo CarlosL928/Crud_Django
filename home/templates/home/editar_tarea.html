@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% if form.instance.pk %}Editar Tarea{% else %}Nueva Tarea{% endif %}</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'home/styles.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>{% if form.instance.pk %}Editar Tarea{% else %}Nueva Tarea{% endif %}</h1>
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">{% if form.instance.pk %}Actualizar{% else %}Crear{% endif %}</button>
+        </form>
+        <a href="{% url 'lista_tareas' %}" class="button mt-20">Volver a la lista</a>
+    </div>
+</body>
+</html>

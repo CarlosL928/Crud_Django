@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de Tareas</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'home/styles.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Lista de Tareas</h1>
+        <ul>
+            {% for tarea in tareas %}
+            <div class="link-container">
+                <a href="{% url 'detalle_tarea' tarea.id %}" class="button">{{ tarea.titulo }}</a>
+                <a href="{% url 'editar_tarea' tarea.id %}" class="button btn-edit">Editar</a>
+                <a href="{% url 'eliminar_tarea' tarea.id %}" class="button btn-delete">Eliminar</a>
+            </div>
+            {% endfor %}
+        </ul>
+        <a href="{% url 'nueva_tarea' %}">Nueva Tarea</a>
+    </div>
+</body>
+</html>

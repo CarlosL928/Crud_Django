@@ -1,0 +1,407 @@
+/* home/static/home/styles.scss */
+/* Importar fuentes de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Pacifico&display=swap');
+
+/* Estilo general */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7f6;
+    margin: 0;
+    padding: 0;
+}
+
+/* Contenedor principal */
+/* Estilo de tarjeta para el contenedor principal */
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    max-width: 800px; /* Limitar el ancho máximo para tarjetas más compactas */
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #f9f9f9;
+    border-radius: 0.5rem; /* Borde redondeado para un diseño de tarjeta */
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1); /* Sombra más pronunciada para destacar */
+    text-align: center;
+    overflow: hidden; /* Asegura que el contenido no sobresalga del borde redondeado */
+    position: relative;
+}
+
+/* Estilo del título dentro de la tarjeta */
+.container h1 {
+    font-size: 1.5rem; /* Tamaño de fuente ajustado */
+    color: #333;
+    margin-bottom: 1rem; /* Espacio debajo del título */
+}
+
+/* Estilo del párrafo dentro de la tarjeta */
+.container p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 1rem; /* Espacio debajo del párrafo */
+    line-height: 1.5; /* Altura de línea para mejor legibilidad */
+}
+
+/* Estilo de los enlaces dentro de la tarjeta */
+.container a {
+    background-color: #3498db; /* Color de fondo para los botones */
+    color: #ffffff;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem; /* Borde redondeado para botones */
+    display: inline-block;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin: 0.5rem 0; /* Espacio vertical entre los botones */
+}
+
+/* Efectos de hover para los enlaces */
+.container a:hover {
+    background-color: #2980b9; /* Color más oscuro en hover */
+    transform: translateY(-2px); /* Efecto de elevación en hover */
+}
+
+/* Estilo para el botón de volver a la lista */
+.container a.mt-20 {
+    margin-top: 2rem; /* Espacio superior adicional */
+}
+
+
+/* Encabezados */
+h1 {
+    color: #333;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    text-align: center; /* Centrar el título */
+}
+
+/* Listas */
+/* Estilo general para la lista */
+ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Ajuste del tamaño mínimo para mejorar el ajuste */
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+    margin: 0 auto; /* Centrar la lista en el contenedor */
+    max-width: 100%; /* Asegura que la lista no exceda el ancho del contenedor */
+}
+
+/* Estilo de cada elemento de la lista */
+li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
+    background-color: #f9f9f9;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    max-width: 100%; /* Asegurar que el li no se expanda más allá de su contenedor */
+    box-sizing: border-box; /* Incluye el padding y el borde en el ancho total del elemento */
+}
+
+/* Hover para los elementos de la lista */
+li:hover {
+    background-color: #e9ecef;
+}
+
+/* Contenedor de enlaces en cada elemento de la lista */
+.link-container {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* Estilos para los botones de detalle, editar y eliminar */
+.link-container a {
+    background-color: #3498db;
+    color: #ffffff;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Colores específicos para cada tipo de botón */
+.link-container a.edit {
+    background-color: #f39c12;
+}
+
+.link-container a.delete {
+    background-color: #e74c3c;
+}
+
+/* Hover para los enlaces */
+.link-container a:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+}
+
+.link-container a.edit:hover {
+    background-color: #e67e22;
+}
+
+.link-container a.delete:hover {
+    background-color: #c0392b;
+}
+
+/* Enlaces */
+a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Botones */
+button {
+    background-color: #3498db;
+    color: #ffffff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover para botones */
+button:hover {
+    background-color: #2980b9;
+}
+
+/* Formularios */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form input, form textarea {
+    margin-bottom: 1rem;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+}
+
+form textarea {
+    resize: vertical;
+}
+
+/* Imágenes responsivas */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Espaciado y alineación */
+.mb-10 {
+    margin-bottom: 1rem;
+}
+
+.mt-20 {
+    margin-top: 2rem;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Media Queries para Responsividad */
+
+/* Dispositivos móviles */
+@media (max-width: 600px) {
+    .container {
+        width: 95%;
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    button {
+        padding: 0.5rem 1rem;
+        font-size: 0.875rem;
+    }
+
+    form input, form textarea {
+        font-size: 0.875rem;
+    }
+}
+
+/* Tablets y dispositivos pequeños */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    h1 {
+        font-size: 1.75rem;
+    }
+
+    button {
+        padding: 0.625rem 1.25rem;
+        font-size: 0.9375rem;
+    }
+
+    form input, form textarea {
+        font-size: 0.9375rem;
+    }
+}
+
+/* Estilo general de botones */
+button, .button {
+    background-color: #ccc;
+    color: #333;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem; /* Borde más redondeado */
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase; /* Mayúsculas para los textos de los botones */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: inline-flex; /* Asegura que el botón sea flexible */
+    align-items: center; /* Centra el texto verticalmente */
+    justify-content: center; /* Centra el texto horizontalmente */
+}
+
+/* Hover y efectos para botones */
+button:hover, .button:hover {
+    background-color: #999;
+    transform: translateY(-2px); /* Efecto de elevación en hover */
+}
+
+button:active, .button:active {
+    background-color: #666; /* Color más oscuro en clic */
+    transform: translateY(1px); /* Efecto de hundimiento en clic */
+}
+
+button:focus, .button:focus {
+    outline: none; /* Quitar el borde de enfoque predeterminado */
+}
+
+/* Botones de acción */
+.btn-edit {
+    background-color: #999; /* Color específico para editar */
+}
+
+.btn-delete {
+    background-color: #666; /* Color específico para eliminar */
+}
+
+/* Hover para botones de acción */
+.btn-edit:hover {
+    background-color: #777; /* Hover color para editar */
+}
+
+.btn-delete:hover {
+    background-color: #333; /* Hover color para eliminar */
+}
+
+/* Estilo general para el contenedor de enlaces */
+.link-container {
+    display: flex;
+    flex-direction: column; /* Alineación vertical de los enlaces */
+    gap: 1rem; /* Espacio entre los enlaces */
+    margin: 1rem 0; /* Espacio alrededor del contenedor */
+    padding: 1rem; /* Espacio interno del contenedor */
+    border: 1px solid #ddd; /* Borde alrededor del contenedor */
+    border-radius: 0.5rem; /* Borde redondeado */
+    background-color: #f9f9f9; /* Fondo blanco para el contenedor */
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1); /* Sombra suave para efecto de tarjeta */
+    text-align: center; /* Centrar texto y enlaces dentro del contenedor */
+}
+
+/* Estilo general para los enlaces */
+.link-container a {
+    background-color: #ccc;
+    color: #333;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.25rem;
+    display: inline-block;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Estilo específico para el botón de detalle */
+.link-container a:not(.btn-edit):not(.btn-delete) {
+    background-color: #999; /* Color del botón de detalle */
+}
+
+/* Estilo para el botón de editar */
+.link-container a.btn-edit {
+    background-color: #666; /* Color para el botón de editar */
+}
+
+/* Estilo para el botón de eliminar */
+.link-container a.btn-delete {
+    background-color: #666; /* Color para el botón de eliminar */
+}
+
+/* Efecto de hover para todos los enlaces */
+.link-container a:hover {
+    background-color: #777; /* Color más oscuro para el hover */
+    transform: translateY(-2px); /* Elevación en hover */
+}
+
+/* Efecto de hover específico para el botón de editar */
+.link-container a.btn-edit:hover {
+    background-color: #555; /* Hover color para editar */
+}
+
+/* Efecto de hover específico para el botón de eliminar */
+.link-container a.btn-delete:hover {
+    background-color: #250; /* Hover color para eliminar */
+}
+
+/* Estilo de tarjeta para el contenido específico */
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    max-width: 600px; /* Tamaño máximo para una tarjeta compacta */
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #f9f9f9;
+    border-radius: 0.5rem; /* Borde redondeado para una apariencia de tarjeta */
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1); /* Sombra suave para el efecto de tarjeta */
+    text-align: center; /* Centrar el texto dentro de la tarjeta */
+    overflow: hidden; /* Asegura que el contenido no sobresalga del borde redondeado */
+    position: relative; /* Permite el posicionamiento de elementos adicionales si es necesario */
+    font-family: 'Oswald', sans-serif ;
+}
+
+/* Estilo del título dentro de la tarjeta */
+.card h1 {
+    font-size: 1.5rem; /* Tamaño de fuente ajustado */
+    color: #333;
+    margin-bottom: 1rem; /* Espacio debajo del título */
+}
+
+/* Estilo del párrafo dentro de la tarjeta */
+.card p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 1rem; /* Espacio debajo del párrafo */
+    line-height: 1.5; /* Altura de línea para mejor legibilidad */
+}
